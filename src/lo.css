@@ -1,0 +1,90 @@
+.head1
+{
+ background-color:black;
+ text-align: center;
+ padding: 8px;
+ color: whitesmoke;
+}
+.head2
+{
+    font-size: medium;
+    color: whitesmoke;
+}
+
+.home
+{
+    background-color:gainsboro;
+    color: black;
+    height:625px;
+}
+
+.navb
+{
+    color: black;
+}
+
+.home1
+{
+    text-align: center;
+    padding: 20px;
+    font-weight:bold;
+}
+.home2
+{
+    text-align: center;
+}
+.home3
+{
+
+    font-size:x-large;
+    padding: 10px;
+    width: 400px;
+    margin-left: 330px;
+}
+
+.home4
+{
+    text-align: center;
+}
+
+.submit
+{
+    text-align: center;
+    padding: 50px;
+    background-color:gainsboro;
+    height:625px;
+}
+
+.image
+{
+    height: 300px;
+    width: 400px;
+}
+
+.display
+{
+display:grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+row-gap: 10px;
+column-gap: 10px;
+padding: 10px;
+}
+
+.displayin
+{
+border: 3px double rgba(0, 0, 0, 0.8);
+width:360px;
+padding: 14px;
+height: 540px;
+}
+
+.del
+{
+    position: absolute;
+ margin-left: 10px;
+}
+
+.stat
+{
+ margin-left: 35px;
+}
