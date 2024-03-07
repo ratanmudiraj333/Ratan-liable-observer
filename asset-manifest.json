@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Ratan-liable-observer/static/css/main.164ab68c.css",
+    "main.js": "/Ratan-liable-observer/static/js/main.bafe88e4.js",
+    "index.html": "/Ratan-liable-observer/index.html",
+    "main.164ab68c.css.map": "/Ratan-liable-observer/static/css/main.164ab68c.css.map",
+    "main.bafe88e4.js.map": "/Ratan-liable-observer/static/js/main.bafe88e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.164ab68c.css",
+    "static/js/main.bafe88e4.js"
+  ]
+}
