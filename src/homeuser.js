@@ -76,7 +76,7 @@ useEffect(() => {
       .catch(err => console.log(err))
      }
 
-     const addItem = async() => {
+     const addObservation = async() => {
       if (!inputText || !inputText1 || !inputText2 || !inputText3 || !inputText4 || !inputTexttype || !inputFile) { 
         alert("All fields must be filled out."); 
         //SetinputText5("progress")
@@ -384,7 +384,7 @@ return <div className="Observation">
 <label for="file">Upload image(File size should be less than 70KB):</label><br></br>
 <input type="file" id="file" name="file" onChange={convertbase} ref={inputRef}/><br></br><br></br>
 <button type="submit" value="Submit" onClick=
-{() => {addItem()
+{() => {addObservation()
   dropShow("Select")}}
 
 >Submit</button><br></br>
