@@ -113,7 +113,7 @@ useEffect(() => {
       inputRef.current.value = null;
      }
 
-     const deleteTodo = async(id) => {
+     const deleteObservation = async(id) => {
       try{
           const response = await fetch(API_BASE + "/delete/" + id, {
               method: "DELETE",
@@ -154,7 +154,7 @@ useEffect(() => {
       } 
   }; 
 
-  const updateTodo = async(id) => {
+  const updateObservation = async(id) => {
     const data = await fetch(API_BASE + "/new/" + id, {
       method: "POST",
       headers: {
@@ -289,7 +289,7 @@ useEffect(() => {
 {filteredp.map((item)=> {
 
 const {_id, name,email,country,city,descr,category,status,image} = item
-return  <div className="todo">
+return  <div className="Observation">
    <div className="text displayin">
    {image==""|| image==null?"": <img width={330} height={250} src={image} />}
    <p>Observer Name: {item.name}</p>
@@ -309,14 +309,14 @@ return  <div className="todo">
                                         )}
                                         {editableId === item._id ? ( 
                                           <p>
-                                          <button className="btn btn-primary btn-sm" onClick={() => updateTodo(item._id)}> 
+                                          <button className="btn btn-primary btn-sm" onClick={() => updateObservation(item._id)}> 
                                                 Save
-                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteTodo(_id)}>Delete</button></span></p> 
+                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteObservation(_id)}>Delete</button></span></p> 
                                             ) : (   
                                               <p>
                                               <button className="btn btn-primary btn-sm" onClick={() => toggleEditable(item._id)}> 
                                                 Edit
-                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteTodo(_id)}>Delete</button></span> </p>
+                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteObservation(_id)}>Delete</button></span> </p>
                                             )}
    </div>
  </div>   
@@ -331,7 +331,7 @@ return  <div className="todo">
   {filteredt.map((item)=> {
 
 const {_id, name,email,country,city,descr,category,status,image} = item
-return <div className="todo">
+return <div className="Observation">
    <div className="text displayin">
    {image==""|| image==null?"": <img width={330} height={250} src={image} />}
    <p>Observer Name: {item.name}</p>
@@ -352,14 +352,14 @@ return <div className="todo">
                                         )}
                                         {editableId === item._id ? ( 
                                           <p>
-                                          <button className="btn btn-primary btn-sm" onClick={() => updateTodo(item._id)}> 
+                                          <button className="btn btn-primary btn-sm" onClick={() => updateObservation(item._id)}> 
                                                 Save
-                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteTodo(_id)}>Delete</button></span></p> 
+                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteObservation(_id)}>Delete</button></span></p> 
                                             ) : (   
                                               <p>
                                               <button className="btn btn-primary btn-sm" onClick={() => toggleEditable(item._id)}> 
                                                 Edit
-                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteTodo(_id)}>Delete</button></span> </p>
+                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteObservation(_id)}>Delete</button></span> </p>
                                             )}
    </div>
  </div>  
@@ -374,7 +374,7 @@ return <div className="todo">
   {filtereda.map((item)=> {
 
 const {_id, name,email,country,city,descr,category,status,image} = item
-return <div className="todo">
+return <div className="Observation">
    <div className="text displayin">
    {image==""|| image==null?"": <img width={330} height={250} src={image} />}
    <p>Observer Name: {item.name}</p>
@@ -394,14 +394,14 @@ return <div className="todo">
                                         )}
                                         {editableId === item._id ? ( 
                                           <p>
-                                          <button className="btn btn-primary btn-sm" onClick={() => updateTodo(item._id)}> 
+                                          <button className="btn btn-primary btn-sm" onClick={() => updateObservation(item._id)}> 
                                                 Save
-                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteTodo(_id)}>Delete</button></span></p> 
+                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteObservation(_id)}>Delete</button></span></p> 
                                             ) : (   
                                               <p>
                                               <button className="btn btn-primary btn-sm" onClick={() => toggleEditable(item._id)}> 
                                                 Edit
-                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteTodo(_id)}>Delete</button></span> </p>
+                                            </button><span><button className="btn btn-danger btn-sm del" onClick={() => deleteObservation(_id)}>Delete</button></span> </p>
                                             )}
    </div>
  </div>  

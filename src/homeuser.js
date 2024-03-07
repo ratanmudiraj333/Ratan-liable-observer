@@ -113,7 +113,7 @@ useEffect(() => {
       inputRef.current.value = null;
      }
 
-     const deleteTodo = async(id) => {
+     const deleteObservation = async(id) => {
       try{
           const response = await fetch(API_BASE + "/delete/" + id, {
               method: "DELETE",
@@ -154,7 +154,7 @@ useEffect(() => {
       } 
   }; 
 
-  const updateTodo = async(id) => {
+  const updateObservation = async(id) => {
     const data = await fetch(API_BASE + "/new/" + id, {
       method: "POST",
       headers: {
@@ -289,7 +289,7 @@ useEffect(() => {
 {filteredp.map((item)=> {
 
 const {_id, name,email,country,city,descr,category,status,image} = item
-return  <div className="todo">
+return  <div className="Observation">
    <div className="text displayinuser">
    {image==""|| image==null?"": <img width={330} height={250} src={image} />}
    <p>Observer Name: {item.name}</p>
@@ -310,7 +310,7 @@ return  <div className="todo">
   {filteredt.map((item)=> {
 
 const {_id, name,email,country,city,descr,category,status,image} = item
-return <div className="todo">
+return <div className="Observation">
    <div className="text displayinuser">
    {image==""|| image==null?"": <img width={330} height={250} src={image} />}
    <p>Observer Name: {item.name}</p>
@@ -331,7 +331,7 @@ return <div className="todo">
   {filtereda.map((item)=> {
 
 const {_id, name,email,country,city,descr,category,status,image} = item
-return <div className="todo">
+return <div className="Observation">
    <div className="text displayinuser">
    {image==""|| image==null?"": <img width={330} height={250} src={image} />}
    <p>Observer Name: {item.name}</p>
