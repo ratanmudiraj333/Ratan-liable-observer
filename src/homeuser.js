@@ -33,9 +33,9 @@ function Homeuser()
 
     const filtereda = items.filter( value => value.category === "accident");
 
-    //Add useEffect, GetTodos() will run every time the component renders
+    //Add useEffect, GetObservations() will run every time the component renders
 useEffect(() => {
-  GetTodos();
+  GetObservations();
 }, []);
 
 
@@ -69,7 +69,7 @@ useEffect(() => {
     }
 
 
-    const GetTodos = () => {
+    const GetObservations = () => {
       fetch(API_BASE)
       .then(res => res.json())
       .then(data => Setitems(data))
@@ -101,7 +101,7 @@ useEffect(() => {
          image: inputFile
            })
       }).then(res => res.json()) 
-      await GetTodos()
+      await GetObservations()
       SetinputText('')
       SetinputText1('')
       SetinputText2('')
@@ -166,7 +166,7 @@ useEffect(() => {
      }).then(res => res.json()) 
      setEditableId(null); 
      editSetinputText5(""); 
-     await GetTodos()
+     await GetObservations()
      //setInput('')
      //setInput1('')
      //setInput2('')
