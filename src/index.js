@@ -1,6 +1,5 @@
 import React from 'react';
 import {HashRouter, BrowserRouter, Routes, Route} from 'react-router-dom';
-import './index.css';
 import ReactDOM from 'react-dom';
 import Access from './Access.js';
 import Home from './home.js';

@@ -1,8 +1,9 @@
-import React,{useState, useEffect} from 'react';
+import React,{useState, useEffect, useRef} from 'react';
 import './louser.css';
 
 //Add API base
-const API_BASE= 'http://localhost:4000/lo';
+//const API_BASE= 'http://localhost:4000/lo';
+const API_BASE= 'https://ratan-liable-observer-backend.onrender.com/lo';
 
 function Homeuser()
 {
@@ -16,6 +17,7 @@ function Homeuser()
     const [editinputText5, editSetinputText5] = useState("");
     const [inputTexttype, SetinputTexttype] = useState("");
     const [inputFile, setInputFile] = useState();
+    const inputRef = useRef(null);
     const [items, Setitems] = useState([]);
 
     const [itemst, Setitemst] = useState([]);
@@ -108,6 +110,7 @@ useEffect(() => {
       SetinputText5('Inprogress')
       SetinputTexttype('')
       setInputFile('')
+      inputRef.current.value = null;
      }
 
      const deleteTodo = async(id) => {
@@ -257,17 +260,17 @@ useEffect(() => {
     <h1 className = "head1">Liable Observer<span className = "head2"> - Observe and share liabilities</span></h1>
 
     <nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist">
-    <button class="nav-link active navb" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-    <button class="nav-link navb" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Pollution</button>
-    <button class="nav-link navb" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Traffic Jam</button>
-    <button class="nav-link navb" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Accident Prone areas</button>
-    <button class="nav-link navb" id="nav-submit-tab" data-bs-toggle="tab" data-bs-target="#nav-submit" type="button" role="tab" aria-controls="nav-submit" aria-selected="false">Submit case</button>
+  <div className="nav nav-tabs" id="nav-tab" role="tablist">
+    <button className="nav-link active navb" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+    <button className="nav-link navb" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Pollution</button>
+    <button className="nav-link navb" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Traffic Jam</button>
+    <button className="nav-link navb" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Accident Prone areas</button>
+    <button className="nav-link navb" id="nav-submit-tab" data-bs-toggle="tab" data-bs-target="#nav-submit" type="button" role="tab" aria-controls="nav-submit" aria-selected="false">Submit case</button>
   </div>
 </nav>
-<div class="tab-content" id="nav-tabContent">
+<div className="tab-content" id="nav-tabContent">
 
-  <div class="tab-pane fade show active home" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+  <div className="tab-pane fade show active home" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
   <br></br><br></br>
   <h2 className='home1'>Liable Observer is a portal where citizens can check liable elements around them</h2><br></br>
   <h4 className='home2'>We focus on 3 Liable elements</h4>
@@ -280,7 +283,7 @@ useEffect(() => {
   </div>
 
 
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+  <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
   <div className='displayuser'>
 
 {filteredp.map((item)=> {
@@ -301,7 +304,7 @@ return  <div className="todo">
 </div>
 </div>
 
-  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+  <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
   <div className='displayuser'>
 
   {filteredt.map((item)=> {
@@ -322,7 +325,7 @@ return <div className="todo">
 </div>
   </div>
 
-  <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+  <div className="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
   <div className='displayuser'>
 
   {filtereda.map((item)=> {
@@ -343,7 +346,7 @@ return <div className="todo">
 </div>
   </div>
 
-  <div class="tab-pane fade submit" id="nav-submit" role="tabpanel" aria-labelledby="nav-submit-tab" tabindex="0">
+  <div className="tab-pane fade submit" id="nav-submit" role="tabpanel" aria-labelledby="nav-submit-tab" tabindex="0">
   <h2>Submit Observations</h2>
   <label for="Oname">Observer name:</label><br></br>
   <input style={{width : "230px"}} type="text" id="Oname" name="Oname" onChange={handletext} value={inputText} maxlength="20"/><br></br>
@@ -362,14 +365,14 @@ return <div className="todo">
   <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     {drop}
   </button>
-  <ul class="dropdown-menu">
-  <li class="dropdown-item" onClick = {() => {SetinputTexttype("pollution")
+  <ul className="dropdown-menu">
+  <li className="dropdown-item" onClick = {() => {SetinputTexttype("pollution")
   dropShow("Pollution")}}>Pollution</li>
 
-  <li class="dropdown-item" onClick =  {() => {SetinputTexttype("traffic")
+  <li className="dropdown-item" onClick =  {() => {SetinputTexttype("traffic")
   dropShow("Traffic Jam")}}>Traffic Jam</li>
 
-  <li class="dropdown-item" onClick =  {() => {SetinputTexttype("accident")
+  <li className="dropdown-item" onClick =  {() => {SetinputTexttype("accident")
   dropShow("Accident Prone areas")}}>Accident Prone areas</li>
   </ul>
 
@@ -379,7 +382,7 @@ return <div className="todo">
 
 
 <label for="file">Upload image(File size should be less than 70KB):</label><br></br>
-<input type="file" id="file" name="file" onChange={convertbase}/><br></br><br></br>
+<input type="file" id="file" name="file" onChange={convertbase} ref={inputRef}/><br></br><br></br>
 <button type="submit" value="Submit" onClick=
 {() => {addItem()
   dropShow("Select")}}
