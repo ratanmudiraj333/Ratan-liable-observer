@@ -253,7 +253,7 @@ useEffect(() => {
         }
     }*/
 
-    //console.log({inputTexttype});
+
     console.log({inputTexttype});
     return(
     <div>
