@@ -24,7 +24,7 @@ function Access()
 let navigate = useNavigate(); 
 function Click2()
 {
-    if (inputText === "ratan333" && inputText1 === "liableobserver3")
+    if (inputText === "admin123" && inputText1 === "liableobserver3")
     {
     let path = `admin`; 
     navigate(path);

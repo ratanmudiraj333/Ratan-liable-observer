@@ -262,9 +262,9 @@ useEffect(() => {
     <nav>
   <div className="nav nav-tabs" id="nav-tab" role="tablist">
     <button className="nav-link active navb" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
-    <button className="nav-link navb" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Pollution</button>
-    <button className="nav-link navb" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Traffic Jam</button>
-    <button className="nav-link navb" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Accident Prone areas</button>
+    <button className="nav-link navb" id="nav-pollution-tab" data-bs-toggle="tab" data-bs-target="#nav-pollution" type="button" role="tab" aria-controls="nav-pollution" aria-selected="false">Pollution</button>
+    <button className="nav-link navb" id="nav-traffic-tab" data-bs-toggle="tab" data-bs-target="#nav-traffic" type="button" role="tab" aria-controls="nav-traffic" aria-selected="false">Traffic Jam</button>
+    <button className="nav-link navb" id="nav-accident-tab" data-bs-toggle="tab" data-bs-target="#nav-accident" type="button" role="tab" aria-controls="nav-accident" aria-selected="false">Accident Prone areas</button>
     <button className="nav-link navb" id="nav-submit-tab" data-bs-toggle="tab" data-bs-target="#nav-submit" type="button" role="tab" aria-controls="nav-submit" aria-selected="false">Submit case</button>
   </div>
 </nav>
@@ -283,7 +283,7 @@ useEffect(() => {
   </div>
 
 
-  <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+  <div className="tab-pane fade" id="nav-pollution" role="tabpanel" aria-labelledby="nav-pollution-tab" tabindex="0">
   <div className='display'>
 
 {filteredp.map((item)=> {
@@ -325,7 +325,7 @@ return  <div className="Observation">
 </div>
 </div>
 
-  <div className="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+  <div className="tab-pane fade" id="nav-traffic" role="tabpanel" aria-labelledby="nav-traffic-tab" tabindex="0">
   <div className='display'>
 
   {filteredt.map((item)=> {
@@ -368,7 +368,7 @@ return <div className="Observation">
 </div>
   </div>
 
-  <div className="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">
+  <div className="tab-pane fade" id="nav-accident" role="tabpanel" aria-labelledby="nav-accident-tab" tabindex="0">
   <div className='display'>
 
   {filtereda.map((item)=> {
