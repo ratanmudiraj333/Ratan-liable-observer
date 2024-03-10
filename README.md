@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+Liable Observer is a portal where citizens can check liable elements around them.Liable elements are categorized into 3 elements(Pollution, Traffic Jam & Accident prone areas) Citizens can submit new observations under submit observation tab and select the liability type, the observation will be displayed under the tab as per the type we selected & Administrator will provide update on the status of the liability and can also delete observations. Developed using MERN stack(MongoDB, ExpressJS, ReactJS & NodeJS). Backend is deployed using github & render software and frontend is deployed using github.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Screen shots
 
-## Available Scripts
+Universal Observer Access
 
-In the project directory, you can run:
+![image](https://github.com/ratanmudiraj333/Ratan-liable-observer/assets/121163791/7c950312-6c5b-4607-8950-975b2eeb5c02)
 
-### `npm start`
+![image](https://github.com/ratanmudiraj333/Ratan-liable-observer/assets/121163791/11582733-e596-44f7-979f-7a4f7dbd991c)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![image](https://github.com/ratanmudiraj333/Ratan-liable-observer/assets/121163791/64e94631-eec4-4e39-99fd-eda3b0c5c7e7)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![image](https://github.com/ratanmudiraj333/Ratan-liable-observer/assets/121163791/ba72cc62-08bb-47b5-8670-fe8e4f38f0ad)
 
-### `npm test`
+Administrator Access
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](https://github.com/ratanmudiraj333/Ratan-liable-observer/assets/121163791/8e5bbddd-9bbb-4e5b-8963-7d5075914dbe)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![image](https://github.com/ratanmudiraj333/Ratan-liable-observer/assets/121163791/5b37bda9-cec8-417f-b474-71a0da420eee)
